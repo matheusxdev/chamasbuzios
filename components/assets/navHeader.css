@@ -1,0 +1,395 @@
+:root{
+    --color-header-primary: #fff;
+    --color-header-secondary: #000;
+    --color-header-terciary: #ff0400;
+    --color-header-quaternary: #FAC031;
+
+    --color-header-err: #cf2f2f;
+    --color-header-warning: #dd8500;
+    --color-header-success: #027d02;
+
+    --background-header: #fff;
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 92dvw;
+  height: 6rem;
+  padding: 0.3rem 4rem;
+  background: transparent;
+  transition: 0.5s;
+  z-index: 2;
+
+  background-color: rgb(0 0 0 / 28%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.navHeader.quemSomos {
+  background: #191919;
+}
+
+.navHeader.change {
+  background-color: rgb(0 0 0 / 28%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.navHeader.extended {
+  height: 5rem;
+  align-items: flex-end;
+}
+
+.navHeader .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70%;
+  gap: 1.4rem;
+}
+
+.navHeader .left a {
+  color: #000;
+  text-decoration: none;
+}
+
+.navHeader .left .btnMenu {
+  display: none;
+  margin: 0 0.4rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--color-header-quaternary);
+}
+
+.navHeader .left img {
+  width: 8rem;
+  padding: 0.3rem;
+}
+
+.navHeader .left button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--color-header-quaternary);
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+}
+
+.navHeader .left img:hover, .navHeader .left button:hover, .navHeader .right .boxSearch button.btnSearch:hover, .navHeader .right .btnCart:hover, .navHeader .right .btnNotif:hover, .navHeader .right .btnLogin:hover , .navHeader .right .btnCloseLogin:hover, .navHeader .right .btnProfile:hover {
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.navHeader .left button > span{
+  margin-left: 0.3rem;
+}
+
+.navHeader span.title {
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+}
+
+.navHeader span.title.change {
+  color: #fff;
+}
+
+.navHeader .boxSearch {
+  position: relative;
+  height: 4rem;
+  padding: 0.3rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.navHeader .boxSearch.change {
+  background: #00000000;
+}
+
+.boxSearch input {
+  width: 32rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--color-header-quaternary);
+  padding-left: 0.4rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: rgb(0 0 0 / 31%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.boxSearch input::-webkit-input-placeholder, .navHeader-bottomSearch input::-webkit-input-placeholder{
+  color: #fff;
+}
+
+.navHeader .right .boxSearch button.btnSearch {
+  position: absolute;
+  right: 0.4rem;
+}
+
+.navHeader .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navHeader .right button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 0.3rem;
+  color: var(--color-header-secondary);
+  cursor: pointer;
+}
+
+.navHeader .btnSearch,
+.navHeader .btnCart,
+.navHeader .btnNotif,
+.navHeader .btnLogin,
+.navHeader .btnCloseLogin,
+.navHeader .btnProfile {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+}
+
+.navHeader .right .boxCart {
+  position: relative;
+}
+
+.navHeader .boxCart span.qtdCart {
+  position: absolute;
+  top: -0.6rem;
+  left: -0.3rem;
+  background: var(--color-header-err);
+  color: #fff;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+.navHeader .btnSearch,
+.navHeader .btnLogin,
+.navHeader .btnCloseLogin,
+.navHeader .btnProfile {
+  background: #f0f0f0;
+}
+
+.navHeader .btnCart,
+.navHeader .btnNotif {
+  background: var(--color-header-quaternary);
+  color: #fff;
+}
+
+/* NAVHEADER BOTTOM*/
+
+.navHeader-bottom {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  width: 92dvw;
+  height: 3rem;
+  padding: 0.3rem 3.8rem;
+  background: transparent;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.navHeader-bottom > button {
+  background: var(--color-header-quaternary);
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0.4rem;
+  cursor: pointer;
+  height: 2rem;
+}
+
+.navHeader-bottomSearch {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 92dvw;
+    height: 3rem;
+    padding: 0.3rem 4rem;
+    background: transparent;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.navHeader-bottomSearch.hide{
+  display: none;
+}
+
+.navHeader-bottomSearch input#inputSearch1 {
+  width: 100%;
+  height: 80%;
+  border: 1px solid var(--color-header-quaternary);
+  padding-left: 0.4rem;
+  color: #fff;
+  background-color: rgb(0 0 0 / 31%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.navHeader-bottomSearch button.btnSearch {
+  position: absolute;
+  right: 12dvw;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 1600px) {
+  .navHeader .left button span{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .boxSearch input {
+    width: 26rem;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .boxSearch input {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .boxSearch input {
+    width: 14rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .navHeader .left button{
+    display: none;
+  }
+
+  .navHeader .left button.btnMenu {
+      display: initial !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navHeader{
+    width: 84dvw;
+  }
+
+  .navHeader .left button.btnHome, .navHeader .left button.btnQuemSomos {
+      padding: 0.4rem 0.8rem;
+  }
+
+  .navHeader .left button.btnHome span, .navHeader .left button.btnQuemSomos span {
+    display: none;
+  }
+
+  .boxSearch input {
+      width: 14rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .navHeader{
+    /*background: var(--color-header-quaternary);*/
+    height: 4rem;
+  }
+
+  .navHeader .left {
+      justify-content: left;
+  }
+
+  .navHeader .left img{
+    /*width: 3rem;*/
+  }
+
+  .navHeader .left button.btnHome, .navHeader .left button.btnQuemSomos{
+      display: none;
+  }
+
+  .navHeader .right .btnCart, .navHeader .right .btnNotif {
+    /*background: var(--color-header-terciary);*/
+    /*color: #fff !important;*/
+  }
+
+  .navHeader-bottomSearch button.btnSearch {
+      right: 8dvw;
+  }
+
+  .navHeader .boxSearch {
+      display: none;
+  }
+
+  .navHeader .left .btnMenu {
+      display: initial;
+  }
+
+  .navHeader-bottom {
+      display: none;
+  }
+
+  .navHeader-bottomSearch {
+      display: flex;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navHeader .left img {
+      /*width: 2.6rem;*/
+  }
+
+  .navHeader, .navHeader-bottom, .navHeader-bottomSearch {
+      width: 92dvw;
+      height: 4rem;
+      padding: 0.3rem 1rem;
+  }
+
+  .navHeader-bottomSearch button.btnSearch {
+      right: 6dvw;
+  }
+
+  .navHeader .btnSearch,
+  .navHeader .btnCart,
+  .navHeader .btnNotif,
+  .navHeader .btnLogin,
+  .navHeader .btnCloseLogin,
+  .navHeader .btnProfile {
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.1rem;
+  }
+}

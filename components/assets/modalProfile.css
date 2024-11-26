@@ -1,0 +1,83 @@
+.modalProfile {
+  display: none;
+}
+
+.modalProfile.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.modalProfile-content {
+  background: #fff;
+  width: 26rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalProfile .modalProfile-contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0.6rem;
+  border-bottom: 1px solid #cccc;
+}
+
+.modalProfile .modalProfile-contentHeader span.name{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalProfile .modalProfile-contentHeader button.btnCloseModalProfile {
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.modalProfile .modalProfile-contentBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.modalProfile .modalProfile-contentBody > button {
+  width: 98%;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #cccc;
+  cursor: pointer;
+}
+
+.modalProfile .modalProfile-contentBody > button span{
+  margin-left: 0.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .modalProfile.active {
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  .modalProfile-content {
+    width: 98%;
+    height: 100%;
+  }
+}

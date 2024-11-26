@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+            *{
+                font-family: "Teko", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            .main {
+                margin: 0.3rem 0;
+                padding: 0.8rem 0;
+            }
+
+            h1.title {
+                font-size: 3rem;
+                text-align: left;
+            }
+
+            h2.subtitle{
+                font-size: 2rem;
+            }
+
+            p.subtitle {
+                font-size: 1.4rem;
+                text-align: left;
+                word-break: break-word;
+            }
+
+            span.style {
+                color: #FAC031;
+            }
+
+            .box {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+
+            hr {
+                max-width: 800px;
+                border: none;
+                border-bottom: 1px solid;
+                border-color: #cccc;
+                margin: 20px auto;
+            }
+
+            .boxImage {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .boxImage img {
+                width: 100px;
+            }
+
+            .boxGo {
+                margin: 0 auto;
+                max-width: 800px;
+            }
+
+            .boxGo > button {
+                width: 224px;
+                height: 46px;
+                background: #FAC031;
+                color: #fff;
+                font-size: 26px;
+                font-weight: bold;
+                border: none;
+                border-radius: 0.3rem;
+            }
+
+            .boxContato {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .boxContato > button {
+                width: 3rem;
+                height: 3rem;
+                margin: 0 0.3rem;
+                background: #FAC031;
+                color: #fff;
+                font-size: 1.4rem;
+                border: none;
+                border-radius: 50%;
+            }
+
+            .boxContato button img {
+                width: 26px;
+            }
+
+            p.info {
+                text-align: left;
+                font-size: 1rem;
+                color: #434242;
+            }
+
+            a {
+                color: #fff !important;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .voucher {
+                max-width: 400px;
+                min-height: 25rem;
+                background: #fac031;
+                border-radius: 2rem;
+            }
+
+            .voucher .voucher-header {
+                max-width: 10rem;
+                margin: auto;
+            }
+
+            .voucher .voucher-header img {
+                max-width: 10rem;
+            }
+
+            .voucher .voucher-body {
+                text-align: center;
+            }
+
+            .voucher .voucher-body > span{
+                font-size: 1.2rem;
+                color: #000;
+            }
+
+            .voucher .voucher-body .qrVoucher{
+                max-width: 10rem;
+                margin: 0.6rem auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="boxImage">
+                <img src="https://destinotourbuzios.com.br/img/logo.png" alt="logo destino tour buzios" />
+            </div>
+            <hr>
+
+            <div class="box">
+                <h1 class="title">Parabéns, seu <span class="style">voucher já está disponivel!</span></h1>
+            </div>
+
+            <hr>
+
+            <div class="box">
+                <h2 class="subtitle">Olá, <span class="style">[NAME]</span></h2>
+            </div>
+
+            <div class="box">
+                <p class="subtitle">Agora você pode aproveitar a sua reserva, enviaremos outros e-mails para te lembrar da sua reserva.</p>
+            </div>
+
+            <div class="box">
+                <div class="voucher">
+                    <div class="voucher-header">
+                        <img src="https://destinotourbuzios.com.br/img/logo.png" alt="logo destino tour buzios" />
+                    </div>
+
+                    <hr>
+
+                    <div class="voucher-body">
+                        <div class="box">
+                            <span class="idVoucher">ID: [IDVOUCHER]</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="nameProduct">[NAME_PRODUCT]</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="date">Data da reserva: [DATE]</span>
+                        </div>
+
+                        <div class="box">
+                            <span class="hour">Hora da reserva: [HOUR]</span>
+                        </div>
+
+                        <img class="qrVoucher" src=[QRVOUCHER] alt="imagem do qr code voucher">
+                    </div>
+
+                    <div class="voucher-footer">
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <p class="subtitle">
+                    Caso esteja enfrentando problemas ao efetuar a reserva ou esteja com dúvidas você poderá entrar em contato com o suporte abaixo
+                </p>
+            </div>
+
+            <div class="boxContato">
+                <button><a href="https://api.whatsapp.com/send?phone=5521965683393&text=Ol%C3%A1,%20preciso%20de%20ajuda%20com%20o%20cadastro" target="_blank" rel="noopener noreferrer"><img src="https://redestar.shop/img/emoji-whatsapp.png" alt=""></a></button>
+                <button><a href="https://www.instagram.com/destinotourbuzios_" target="_blank" rel="noopener noreferrer"><img src="https://redestar.shop/img/emoji-instagram.png" alt=""></a></button>
+            </div>
+
+            <div class="box">
+                <p class="info">©2024 Destino Tour Buzios. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+            *{
+                font-family: "Teko", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 500;
+                font-style: normal;
+            }
+
+            .main {
+                margin: 0.3rem 0;
+                padding: 0.8rem 0;
+            }
+
+            p.title{
+                font-size: 1.4rem;
+                text-align: center;
+            }
+
+            p.subtitle {
+                font-size: 1.4rem;
+                text-align: center;
+                word-break: break-word;
+            }
+
+            .box {
+                margin: 0 auto;
+                width: 80dvw;
+            }
+
+            .boxImage {
+                width: 100px;
+                margin: 0 auto;
+            }
+
+            .boxImage img {
+                width: 100px;
+                border-radius: 0.3rem;
+            }
+
+            .boxIcon {
+                margin: 0 auto;
+                width: 90%;
+                color: #FAC031;
+            }
+
+            .boxIcon > .icon {
+                text-align: center;
+            }
+
+            .boxIcon img {
+                width: 160px;
+            }
+
+            p.info {
+                text-align: center;
+                font-size: 1rem;
+                color: #434242;
+            }
+
+            .link {
+                font-size: 1.4rem;
+                font-weight: bold;
+                text-align: center;
+                color: #000;
+            }
+
+            .boxQr {
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .boxQr img {
+                width: 200px;
+                margin: 0 50px;
+            }
+
+            .boxLink {
+                width: 24rem;
+                margin: 0 auto;
+            }
+
+            a {
+                color: #000 !important;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="boxImage">
+                <img src="https://chamasbuzios.com.br/img/logo.png" alt="" />
+            </div>
+    
+            <div class="box">
+                <p class="title">
+                    Olá [NOME], efetuamos o seu cadastro como afiliado!</p>
+            </div>
+
+            <div class="boxIcon">
+                <div class="icon"><img src="https://redestar.shop/img/emoji-face-grin-hearts.png" alt=""></div>
+                <p class="title">Agora é só começar a indicar e ganhar a sua renda extra</p>
+            </div>
+    
+            <div class="box">
+                <p class="subtitle">Você pode indicar atraves do seu link ou QR Code abaixo</p>
+
+                <p class="subtitle">Você também pode fornecer seu CUPOM para ser aplicado na hora da compra</p>
+            </div>
+
+            <div class="box">
+                <p class="subtitle">Aqui está seu CUPOM</p>
+                <p class="link">[CUPOM]</p>
+            </div>
+
+            <div class="box">
+                <p class="subtitle">Aqui está seu link</p>
+                <p class="link"><a href="https://chamasbuzios.com.br?affiliate='[CUPOM]'" class="link">[LINK]</a></p>
+            </div>
+
+            <div class="boxQr">
+                <p class="subtitle">Tire print do seu QR Code e divulgue</p>
+                <img src="https://qrcode.kaywa.com/img.php?s=100&d=?[LINK]" alt="">
+            </div>
+        </div>
+    </body>
+</html>

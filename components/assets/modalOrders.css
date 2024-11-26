@@ -1,0 +1,199 @@
+:root{
+  --color-cart-primary: #fff;
+  --color-cart-secondary: #000;
+  --color-cart-terciary: #ff0400;
+  --color-cart-quaternary: #FAC031;
+
+  --color-cart-err: #cf2f2f;
+  --color-cart-warning: #dd8500;
+  --color-cart-success: #027d02;
+
+  --background-passeio: #fff;
+}
+
+.modalOrders {
+  display: none;
+}
+
+.modalOrders.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.modalOrders .modalOrders-content {
+  background: #fff;
+  width: 26rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalOrders .modalOrders-contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0.6rem;
+  border-bottom: 1px dashed #000;
+}
+
+.modalOrders .modalOrders-contentHeader span.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalOrders .modalOrders-contentHeader .btnCloseModalOrders {
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.modalOrders .modalOrders-contentBody.loading {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalOrders .modalOrders-contentBody {
+  width: 98%;
+  height: 92dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.3rem;
+}
+
+.modalOrders .modalOrders-contentBody.desactive {
+  overflow-y: hidden;
+}
+
+.modalOrders-contentBody .boxErr {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.cardOrders {
+  display: flex;
+  width: 98%;
+  margin: 0.3rem 0;
+  padding: 0.3rem;
+  border: 1px solid #fef6ee;
+  border-radius: 0.3rem;
+}
+
+.cardOrders:hover{
+  border: 1px solid #FE5B00;
+  cursor: pointer;
+}
+
+.cardOrders .cardOrders-header {
+  padding: 0.3rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.cardOrders .cardOrders-header img {
+  object-fit: cover;
+  object-position: 0px 0px;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.cardOrders .cardOrders-header .nOrder {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FEF6EE;
+  color: #FE5B00;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0.3rem;
+}
+
+.cardOrders .cardOrders-header .nOrder:hover{
+  background: #FE5B00;
+  color: #fef6ee;
+}
+
+.cardOrders .cardOrders-header .nOrder span{
+  color: #FE5B00;
+}
+
+.cardOrders .cardOrders-content div.box{
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.cardOrders .cardOrders-content div.box span{
+  margin-left: 0.3rem;
+}
+
+.cardOrders .cardOrders-content span.nameProduct {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cardOrders .cardOrders-content span.dateReserva, .cardOrders .cardOrders-content span.totalVisitantes{
+  font-size: 1.1rem;
+}
+
+.cardOrders .cardOrders-content span.dateReserva .destaq{
+  font-weight: bold;
+  color: #FE5B00;
+}
+
+.cardOrders .cardOrders-content span.priceTotal {
+  color: #037503;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.cardOrders .cardOrders-content button.btnViewMoreDetailsOrder {
+  margin: 0.6rem 0;
+  height: 2rem;
+  background: var(--color-cart-quaternary);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .modalOrders.active {
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  .modalOrders .modalOrders-content{
+    width: 98%;
+    height: 100%;
+  }
+}

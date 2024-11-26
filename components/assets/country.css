@@ -1,0 +1,48 @@
+.country .custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.country .custom-select .select-selected {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.country .custom-select .select-items {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 99;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.country .custom-select .select-items.active {
+  margin-top: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.country .custom-select .select-items div {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.country .custom-select .select-items div:hover {
+  background-color: #f1f1f1;
+}
+
+.country .custom-select .flag {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+}

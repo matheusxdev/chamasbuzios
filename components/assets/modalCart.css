@@ -1,0 +1,566 @@
+:root{
+  --color-cart-primary: #fff;
+  --color-cart-secondary: #000;
+  --color-cart-terciary: #ff0400;
+  --color-cart-quaternary: #FAC031;
+
+  --color-cart-err: #cf2f2f;
+  --color-cart-warning: #dd8500;
+  --color-cart-success: #027d02;
+
+  --background-passeio: #fff;
+}
+
+.modalCart {
+  display: none;
+}
+
+.modalCart.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.modalCart .modalCart-content {
+  background: #fff;
+  width: 26rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalCart .modalCart-contentHeader {
+  height: 4rem;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  border-bottom: 1px dashed #000;
+}
+
+.modalCart-contentHeader .btnCloseModalCart {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalCart .modalCart-contentBody.loading {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalCart .modalCart-contentBody {
+  width: 98%;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding: 0.3rem;
+}
+
+.modalCart .modalCart-contentBody.desactive {
+  overflow-y: hidden;
+}
+
+.modalCart-contentBody .boxErr {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.cardProductCart {
+  display: flex;
+  align-items: center;
+  width: 98%;
+  margin: 0.3rem 0;
+  justify-content: space-between;
+}
+
+.cardProductCart .cardProductCart-header {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.cardProductCart-header img {
+  object-fit: cover;
+  object-position: 0px 0px;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.cardProductCart-header .quantdTotal {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-cart-terciary);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.modalCart-contentBody .cardProductCart-body {
+  width: 44%;
+}
+
+.cardProductCart-body span.nameProduct {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.cardProductCart-body span.priceProduct {
+  font-weight: bold;
+  color: #292929;
+  font-size: 1.1rem;
+}
+
+.cardProductCart-body .priceProductAnt {
+  font-weight: bold;
+  color: #292929;
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.cardProductCart-body span.pricePromoProduct {
+  color: #037503;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cardProductCart-body .infoPersons span.quantdPersons {
+  margin-left: 0.2rem;
+}
+
+.cardProductCart-body .infoDateReserva span.infoDateReserva {
+  margin-left: 0.2rem;
+}
+
+.cardProductCart-body .infoHourReserva span.infoHourReserva {
+  margin-left: 0.2rem;
+}
+
+.cardProductCart-bottom button.deleteProductCart {
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-cart-quaternary);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.boxAlterQuantd button {
+  background: #cccc;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  margin: 0 0.3rem;
+}
+
+.modalCart-contentBody .left {
+  width: 100%;
+}
+
+.modalCart-contentBody .right {
+  width: 100%;
+}
+
+.modalCart-contentBody .boxReservarBottom {
+  position: fixed;
+  border-top: 1px dashed #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  bottom: 5rem;
+  width: 96dvw;
+  height: 4rem;
+  padding: 0.2rem;
+}
+
+.boxReservarBottom .boxReservarBottom-left {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.boxReservarBottom .boxReservarBottom-right {
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.modalCart .modalCart-bottom {
+  width: 26rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0.3rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed #000;
+}
+
+.modalCart-bottom .boxPriceTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modalCart-bottom .boxPriceTotal span.titlePriceTotal {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalCart-bottom .boxPriceTotal span.priceTotal {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-cart-success);
+}
+
+.modalCart-bottom .boxPriceDiscount {
+  margin: 0;
+  position: fixed;
+  bottom: 5rem;
+  height: 3rem;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  border-top: 1px dashed #000;
+}
+
+.modalCart-bottom .boxPriceDiscount span.title {
+  font-size: 1.2rem;
+}
+
+.modalCart-bottom .boxPriceDiscount span.discount {
+  color: var(--color-cart-err);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalCart-bottom button.continueCart, .modalCart .continueOrder {
+  display: flex;
+  align-items: center;
+  width: 9rem;
+  font-size: 1.2rem;
+  height: 3rem;
+  font-weight: bold;
+  background: var(--color-cart-quaternary);
+  color: #000;
+  border: none;
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.continueCart .icon, .continueOrder .icon {
+  position: absolute;
+  right: 0;
+  width: 2.2rem;
+  height: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #fff;
+}
+
+.modalCart .modalReservaBottom {
+  display: none;
+}
+
+.modalCart .modalReservaBottom.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000bd;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalReservaBottom .modalReservaBottom-header {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-bottom: 1px dashed #000;
+  background: #fff;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modalReservaBottom .modalReservaBottom-content {
+  width: 70%;
+  height: 10rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalReservaBottom .modalReservaBottom-contentBody {
+  width: 90%;
+}
+
+.modalReservaBottom input#inputReservaBottom {
+  width: 98%;
+  height: 2.5rem;
+  margin: 0.4rem 0;
+  border-radius: 0.2rem;
+  border: 1px solid #b0b0b0;
+}
+
+.modalReservaBottom .modalReservaBottom-bottom {
+  width: 70%;
+  height: 3rem;
+  background: #fff;
+  border-top: 1px dashed #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+.modalReservaBottom-bottom button.closeModalReservaBottom {
+  height: 2rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #FAC031;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.modalCart .methodsPayment{
+  display: none;
+}
+
+.modalCart .methodsPayment.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.modalCart .methodsPayment-content {
+  background: #fff;
+  width: 26rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalCart .methodsPayment .methodsPayment-contentHeader{
+  height: 4rem;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  border-bottom: 1px dashed #000;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentHeader .btnCloseModalMethodsPayment{
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody .boxErrPayment {
+  margin-top: 0.8rem;
+  color: var(--color-cart-err);
+  width: 80%;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody {
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody .boxPayment {
+  margin: 0.3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 2rem;
+  padding: 0.3rem;
+  border: 1px solid #b0b0b0;
+  border-radius: 0.3rem;
+  width: 96%;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody .boxPayment.active {
+  border-color: #ee9e0a;
+  background: #9f9e9e45;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody .boxPayment.disabled {
+  pointer-events: none;
+  background: #cccc;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody .boxMercadoPago img {
+  width: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+.modalCart .methodsPayment .methodsPayment-contentBody .boxPayment i {
+  font-size: 1.5rem;
+  margin-right: 0.3rem;
+}
+
+/* MODAL PARA CONFIRMAR PEDIDO */
+
+.modalCart .modalConfirmOrder{
+  display: none;
+}
+
+.modalCart .modalConfirmOrder.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.modalCart .modalConfirmOrder .modalConfirmOrder-content {
+  background: #fff;
+  width: 26rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalCart .modalConfirmOrder .modalConfirmOrder-contentHeader{
+  height: 4rem;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  border-bottom: 1px dashed #000;
+}
+
+.modalCart .modalConfirmOrder .modalConfirmOrder-contentHeader .btnCloseModalConfirmOrder{
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalCart .modalConfirmOrder .modalConfirmOrder-contentBody .boxErrPayment {
+  margin-top: 0.8rem;
+  color: var(--color-cart-err);
+  width: 80%;
+}
+
+.modalCart .modalConfirmOrder .modalConfirmOrder-contentBody {
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80dvh;
+}
+
+.modalConfirmOrder-contentBody .boxCardProducts, .modalConfirmOrder-contentBody .boxMethods {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCart-content .modalConfirmOrder-contentBody .cardProductCart-body {
+  width: 68%;
+}
+
+.boxCardProducts-header, .boxMethods-header {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.2rem;
+  margin: 0.3rem 0;
+  border-bottom: 1px solid #cccc;
+  font-size: 1.2rem;
+}
+
+.boxCardProducts-header span, .boxMethods-header span{
+  margin-left: 0.3rem;
+}
+
+.modalConfirmOrder .modalConfirmOrder-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 26rem;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+  .modalCart.active,  .modalCart .methodsPayment.active, .modalCart .modalConfirmOrder.active {
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  .modalCart .modalCart-content, .modalCart .methodsPayment .methodsPayment-content, .modalCart .modalConfirmOrder .modalConfirmOrder-content {
+    width: 98%;
+    height: 100%;
+  }
+
+  .modalCart .modalCart-bottom, .modalConfirmOrder .modalConfirmOrder-bottom{
+    width: 98dvw;
+  }
+}

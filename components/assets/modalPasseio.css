@@ -1,0 +1,721 @@
+:root{
+  --color-passeio-primary: #fff;
+  --color-passeio-secondary: #000;
+  --color-passeio-terciary: #ff0400;
+  --color-passeio-quaternary: #FAC031;
+
+  --color-passeio-err: #cf2f2f;
+  --color-passeio-warning: #dd8500;
+  --color-passeio-success: #027d02;
+
+  --background-passeio: #fff;
+}
+
+.modalPasseio {
+  display: none;
+}
+
+.modalPasseio.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffff;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: 3;
+}
+
+.modalPasseio .modalPasseio-header {
+  width: 99dvw;
+  height: 4rem;
+  border-bottom: 1px dashed #000;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.modalPasseio-header button.closeModalPasseio {
+  background: transparent;
+  font-size: 1.1rem;
+  border: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.modalPasseio .modalPasseio-content {
+  width: 100dvw;
+  height: 89dvh;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.modalPasseio-content .division {
+  border-bottom: 2px dashed #ee9e0a;
+  margin-bottom: 1rem;
+  width: 98%;
+}
+
+.modalPasseio-content .boxImage {
+  width: 40%;
+  height: 90%;
+  margin: 0.6rem 0.3rem;
+}
+
+.modalPasseio-content img.slide {
+  border-radius: 0.3rem;
+  width: 98%;
+  max-height: 68dvh;
+  object-fit: cover;
+}
+
+.modalPasseio-content .boxInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modalPasseio .boxName, .modalPasseio .boxDesc, .modalPasseio .boxPrice, .modalPasseio .boxDuration {
+  width: 98%;
+  padding: 0.3rem;
+}
+
+.modalPasseio .boxName .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modalPasseio-content .boxRoute {
+  width: 97%;
+  margin: 0.3rem 0;
+}
+
+.modalPasseio-content .boxInfoRoute {
+  width: 97%;
+}
+
+.boxRouteAtalaia,
+.boxRouteBardot {
+  display: none;
+}
+
+.boxRouteAtalaia.active,
+.boxRouteBardot.active {
+  display: initial;
+}
+
+.modalPasseio-content .boxRouteBardot .boxRouteBardot-header,
+.modalPasseio-content .boxRouteAtalaia .boxRouteAtalaia-header {
+  display: flex;
+  flex-direction: column;
+  height: 4rem;
+  justify-content: center;
+}
+
+.modalPasseio-content .boxRouteBardot-header span.title,
+.modalPasseio-content .boxRouteAtalaia-header span.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.modalPasseio-content .boxRouteBardot-header span.duration,
+.modalPasseio-content .boxRouteAtalaia-header span.duration {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #494848;
+}
+
+.modalPasseio-content .boxRouteBardot-content .boxRouteBardot-info span.infoText,
+.modalPasseio-content .boxRouteAtalaia-content .boxRouteAtalaia-info span.infoText {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.modalPasseio-content .boxRouteBardot-info .boxRouteBardot-prices,
+.modalPasseio-content .boxRouteAtalaia-info .boxRouteAtalaia-prices {
+  display: flex;
+  flex-direction: column;
+  margin: 0.4rem 0;
+}
+
+.boxRouteBardot-info .boxRouteBardot-prices .box,
+.boxRouteAtalaia-info .boxRouteAtalaia-prices .box {
+  margin: 0.2rem 0;
+}
+
+.boxRouteBardot-info span.infoPrice,
+.boxRouteAtalaia-info span.infoPrice {
+  font-weight: bold;
+  color: #037503;
+}
+
+.modalPasseio-content .boxRoute select {
+  width: 98%;
+  height: 2.5rem;
+  margin: 0.4rem 0;
+  border-radius: 0.2rem;
+  border: 1px solid #b0b0b0;
+}
+
+.modalPasseio .boxReserva {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  position: relative;
+  /*height: 44rem;*/
+  padding-bottom: 8rem;
+}
+
+.modalPasseio .boxPrice .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #046005;
+  margin-bottom: 0.6rem;
+}
+
+.modalPasseio .boxDuration span.duration {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #494848;
+}
+
+.modalPasseio .duration i.fa-solid.fa-clock {
+  margin-right: 0.2rem;
+}
+
+.modalPasseio .boxReserva .division {
+  border-bottom: 2px dashed #ee9e0a;
+  margin-bottom: 1rem;
+}
+
+.modalPasseio .boxReserva .boxInfoPaxes{
+  margin: 0.3rem 0;
+}
+
+.modalPasseio .boxReserva input {
+  width: 99%;
+  max-width: 20rem;
+  height: 2.5rem;
+  margin: 0.4rem 0;
+  border-radius: 0.2rem;
+  border: 1px solid #b0b0b0;
+  color: #000;
+}
+
+.modalPasseio .boxReserva .boxAlertDataInput.active {
+  margin: 0.6rem 0;
+  color: #f81616;
+  font-weight: bold;
+}
+
+.boxReserva .boxErr {
+  display: none !important;
+}
+
+.boxReserva .boxErr.active {
+  display: flex !important;
+  color: #eb3d3d;
+  font-weight: bold;
+}
+
+.boxReserva select#hourReservaPasseio {
+  width: 100%;
+  max-width: 20.2rem;
+  height: 2.5rem;
+  margin-bottom: 0.4rem;
+  border-radius: 0.3rem;
+  border: 1px solid #b0b0b0;
+  color: #000;
+}
+
+.modalPasseio-content .boxReserva .boxHorasReserva {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  width: 98%;
+  max-width: 20rem;
+}
+
+.boxHorasReserva .horaReserva {
+  padding: 0.4rem;
+  border: 1px solid #b0b0b0;
+  border-radius: 0.3rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxHorasReserva .horaReserva.active {
+  border-color: #ee9e0a;
+  background: #9f9e9e45;
+  font-weight: bold;
+}
+
+.modalAlterVisitantes div button {
+  border: none;
+  background: #c0bcbc;
+  font-size: 1.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.modalPasseio .boxReserva .btnAlterVisitantes {
+  width: 100%;
+  max-width: 20rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 1px solid #b0b0b0;
+  border-radius: 0.3rem;
+  margin: 0.4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.modalPasseio .boxReserva .modalAlterVisitantes {
+  display: none;
+}
+
+.modalPasseio .boxReserva .modalAlterVisitantes.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.modalAlterVisitantes-content {
+  background: #fff;
+  width: 26rem;
+  height: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.modalAlterVisitantes-content .modalAlterVisitantes-contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid #b0b0b0;
+}
+
+.modalAlterVisitantes-content .modalAlterVisitantes-contentHeader span.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modalAlterVisitantes-contentBody {
+  width: 98%;
+  height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalPasseio .boxReserva .modalAlterVisitantes .boxPassageiros {
+  width: 94%;
+  display: flex;
+  align-items: center;
+  margin: 0.1rem 0;
+  justify-content: space-evenly;
+}
+
+.boxPassageiros .boxBardotPrice,
+.boxPassageiros .boxAtalaiaPrice {
+  display: none;
+}
+
+.boxPassageiros .boxBardotPrice.active,
+.boxPassageiros .boxAtalaiaPrice.active {
+  display: initial;
+}
+
+.modalPasseio-content .infoPriceTotal .boxBardotPriceTotal,
+.modalPasseio-content .infoPriceTotal .boxAtalaiaPriceTotal {
+  display: none;
+}
+
+.modalPasseio-content .infoPriceTotal .boxBardotPriceTotal.active,
+.modalPasseio-content .infoPriceTotal .boxAtalaiaPriceTotal.active {
+  display: initial;
+}
+
+.modalPasseio .boxReserva .modalAlterVisitantes .boxAdultos, .modalPasseio .boxReserva .modalAlterVisitantes .boxCriancas, .modalPasseio .boxReserva .modalAlterVisitantes .boxCriancasFree {
+  width: 94%;
+  display: flex;
+  align-items: center;
+  margin: 0.1rem 0;
+  justify-content: space-evenly;
+}
+
+.modalAlterVisitantes div .left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.modalAlterVisitantes div .middle {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalAlterVisitantes div .right {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalAlterVisitantes div .left span.subtitle {
+  font-size: 0.8rem;
+}
+
+.modalAlterVisitantes .boxAdultos .pricePassageiros {
+  font-weight: bold;
+}
+
+.modalAlterVisitantes .boxAdultos .priceAdultos {
+  font-weight: bold;
+}
+
+.modalPasseio .boxCriancas .priceCriancas {
+  font-weight: bold;
+}
+
+.modalPasseio .boxCriancasFree .priceCriancasFree {
+  font-weight: bold;
+}
+
+.modalAlterVisitantes div button {
+  border: none;
+  background: #ee9e0a;
+  font-size: 1.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+  border-radius: 0.3rem;
+}
+
+.modalAlterVisitantes .quantdAdultos,
+.modalAlterVisitantes span.quantdCriancas,
+.modalAlterVisitantes span.quantdCriancasFree {
+  border: 1px solid #ccc;
+  padding: 0.3rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+}
+
+.modalAlterVisitantes .modalAlterVisitantes-contentBottom{
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26rem;
+  height: 4rem;
+  border-top: 1px solid #b0b0b0;
+  padding: 0.4rem 0;
+}
+
+.modalAlterVisitantes .modalAlterVisitantes-contentBottom .closeModalAlterVisitantes {
+  width: 8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ee9e0a;
+  border-radius: 0.3rem;
+  border: none;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.boxReserva .infoCriancas {
+  margin: 0.5rem 0;
+  color: #313030;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.modalPasseio-content span.infoTextWarning {
+  color: var(--color-passeio-warning);
+}
+
+.boxReserva .infoPriceTotal {
+  width: 90%;
+  margin: 0.3rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ee9e0a;
+}
+
+.modalPasseio .boxReserva .btnBuyReserva {
+  width: 100%;
+  max-width: 20rem;
+  height: 2.5rem;
+  background: #ee9e0a;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+
+.modalPasseio .boxReserva button.btnBuyReserva.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dataHoje {
+  display: none;
+}
+
+#dataHojeAlmoco {
+  display: none;
+}
+
+/* ESTILO ROTAS */
+
+.modalPasseio-content .boxRouter {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.6rem 0;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.modalPasseio-content .boxRouter-header span.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-passeio-quaternary);
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap {
+  display: flex;
+  margin: 0.3rem 0;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap .boxIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: #FAC031;
+  border-radius: 50%;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap .icon .boxIcon>i {
+  background: transparent;
+  width: initial;
+  height: initial;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap .icon i {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-passeio-quaternary);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap .icon .lineRouter {
+  margin-top: 0.6rem;
+  height: 2rem;
+  border-left: 2px dashed var(--color-passeio-quaternary);
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .etap>span {
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .box {
+  margin: 1rem 0;
+}
+
+.modalPasseio-content .boxRouter .boxRouter-content .box span.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-passeio-quaternary);
+}
+
+.modalPasseio-content .boxMoreInfos .boxMoreInfos-content .box {
+  margin: 1rem 0;
+}
+
+.modalPasseio-content .boxMoreInfos .boxMoreInfos-content .box span.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-passeio-quaternary);
+}
+
+/* ESTILOS MAIS INFORMAÇÕES */
+
+.modalPasseio-content .boxMoreInfos {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.6rem 0;
+}
+
+.modalPasseio-content .boxMoreInfos .boxMoreInfos-header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.modalPasseio-content .boxMoreInfos-header span.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-passeio-quaternary);
+}
+
+.modalPasseio-content .boxMoreInfos-content .boxIncludes {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  height: 2rem;
+}
+
+.modalPasseio-content .boxMoreInfos-content .boxIncludes span {
+  margin-left: 0.3rem;
+}
+
+/* ESTILOS RECOMENDAÇÕES */
+
+.modalPasseio-content .boxRecommendations {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.6rem 0;
+}
+
+.modalPasseio-content .boxRecommendations .boxRecommendations-header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.modalPasseio-content .boxRecommendations-header span.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--color-passeio-quaternary);
+}
+
+.modalPasseio-content .boxRecommendations-content .box {
+  display: flex;
+  align-items: center;
+  margin: 0.6rem 0;
+}
+
+.modalPasseio-content .boxRecommendations-content .box .icon {
+  min-width: 2rem;
+  height: 2rem;
+  background: var(--color-passeio-quaternary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.modalPasseio-content .boxRecommendations-content .box span {
+  margin-left: 0.3rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .modalPasseio .modalPasseio-content {
+    width: 98%;
+    flex-direction: column;
+  }
+
+  .modalAlterVisitantes-content {
+    width: 98%;
+    height: 100dvh;
+    padding: 0.3rem;
+  }
+
+  .modalAlterVisitantes .modalAlterVisitantes-contentBottom {
+    width: 100%;
+    height: 2rem;
+    padding: 0.3rem;
+    bottom: 0;
+  }
+
+  .modalPasseio-content .boxImage {
+      width: 98%;
+  }
+
+  .modalPasseio-content .boxInfo {
+    width: 98%;
+    overflow-y: initial;
+  }
+
+  .modalPasseio-content img.slide {
+      height: 16rem;
+      object-fit: cover;
+  }
+
+  .modalPasseio .boxReserva {
+    width: 98%;
+    align-items: center;
+  }
+
+  .modalReservaBottom .modalReservaBottom-header,
+  .modalReservaBottom .modalReservaBottom-content,
+  .modalReservaBottom .modalReservaBottom-bottom {
+      width: 90%;
+  }
+
+  .modalInfoPayer .modalInfoPayer-content {
+      min-width: 98%;
+      overflow-y: auto;
+      height: 70vh;
+      padding: 4rem 0.3rem;
+  }
+}
