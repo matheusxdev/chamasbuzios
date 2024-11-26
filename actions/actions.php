@@ -37,7 +37,7 @@
             try {
                 $this->mail->addAddress($email);
                 $this->mail->isHTML(true); 
-                $this->mail->Subject = 'Seja bem a Chamas Buzios';
+                $this->mail->Subject = 'Seja bem vindo a Chamas Buzios';
                 $this->mail->Body = $file;
                 $this->mail->send();
 
