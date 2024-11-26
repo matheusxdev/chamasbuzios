@@ -26,7 +26,7 @@
             $this->mail->Port = 465;
             $this->mail->CharSet = "UTF-8";
 
-            $this->mail->setFrom('oficiialstarsocial@gmail.com', 'Destino Tour Buzios');
+            $this->mail->setFrom('oficiialstarsocial@gmail.com', 'Chamas Buzios');
             $this->mail->addReplyTo('suportestarsociial@gmail.com', 'Suporte');
         }
 
@@ -37,7 +37,7 @@
             try {
                 $this->mail->addAddress($email);
                 $this->mail->isHTML(true); 
-                $this->mail->Subject = 'Seja bem ao Destino Tour Buzios';
+                $this->mail->Subject = 'Seja bem a Chamas Buzios';
                 $this->mail->Body = $file;
                 $this->mail->send();
 
@@ -1770,7 +1770,7 @@
                                 <div class="modalVoucher-contentBody">
                                     <div class="voucher">
                                         <div class="voucher-header">
-                                            <img src="https://destinotourbuzios.com.br/img/logo.png" alt="logo destino tour buzios" />
+                                            <img src="https://chamasbuzios.com.br/img/logo.png" alt="logo chamas buzios" />
                                         </div>
 
                                         <hr>
@@ -2067,11 +2067,13 @@
                                                 <div class="boxHorasReserva merriweather-regular">
                                                     <?php
                                                         foreach($availableTimes as $time){
-                                                    ?>
-                                                        <div class="horaReserva" hora="<?php echo $time; ?>">
-                                                            <span><?php echo $time; ?></span>
-                                                        </div>
-                                                    <?php
+                                                            if($time != ""){
+                                                                ?>
+                                                                    <div class="horaReserva" hora="<?php echo $time; ?>">
+                                                                        <span><?php echo $time; ?></span>
+                                                                    </div>
+                                                                <?php
+                                                            }
                                                         }
                                                     ?>
                                                 </div>

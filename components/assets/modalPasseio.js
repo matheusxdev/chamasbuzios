@@ -365,6 +365,7 @@ $(document).on("click", ".btnBuyReserva", function(){
         $(".alert").html('');
     }, 2000);
   }else if(hourReserva == "0"){
+    
     $(".alert").addClass("active err");
     $(".alert").html('<div class="icon"><i class="fa-solid fa-circle-info"></i></div><span>Escolha um horário</span>');
 

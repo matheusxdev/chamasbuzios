@@ -3,7 +3,7 @@
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Agência de turismo | Destino Tour Búzios</title>
+        <title>Uma nova experiência de gastronomia com turismo | Chamas Buzios</title>
         <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
         <meta name="description" content="a melhor agência de turismo de búzios">
         <meta name="keywords" content="buzios, agencia, destino tour buzios, destino tour, passeio de barco, passeios em buzios, turismo, agencia de turismo, agencia de turismo em armacao de buzios, destino tour búzios, passeio de destino, passeios em búzios">
@@ -13,11 +13,11 @@
         <meta name="generator" content="N/A">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"">
-        <link rel="canonical" href="https://destinotourbuzios.com.br" /> 
-        <meta property="og:title" content="Agência de turismo | Destino Tour Buzios">
-        <meta property="og:image" content="https://destinotourbuzios.com.br/img/logo.png">
-        <meta property="og:url" content="https://destinotourbuzios.com.br">
-        <meta property="og:site_name" content="Destino Tour Búzios">
+        <link rel="canonical" href="https://chamasbuzios.com.br" /> 
+        <meta property="og:title" content="Uma nova experiência de gastronomia com turismo | Chamas Buzios">
+        <meta property="og:image" content="https://chamasbuzios.com.br/img/logo.png">
+        <meta property="og:url" content="https://chamasbuzios.com.br">
+        <meta property="og:site_name" content="Chamas Buzios">
         <meta property="og:type" content="website">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

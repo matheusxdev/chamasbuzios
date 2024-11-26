@@ -3,7 +3,7 @@
         private $server = "localhost";
         private $user = "root";
         private $pass = "";
-        private $db = "destinotour"; 
+        private $db = "chamasbuzios"; 
 
         public function conectar(){
             try{
