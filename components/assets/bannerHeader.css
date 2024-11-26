@@ -2,6 +2,14 @@
   margin-top: 6rem;
 }
 
+.bannerHeader .slide {
+  display: none;
+}
+
+.bannerHeader .slide.active {
+  display: initial;
+}
+
 .bannerHeader .bannerHeader-content img {
   width: 100%;
   -webkit-background-size: cover;
