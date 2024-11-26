@@ -10,6 +10,10 @@
 
 <div class="bannerHeader">
   <div class="bannerHeader-content">
-    <img class="slide slide1" src="<?php echo $base_url; ?>img/1.png" alt="">
+    <img class="slide slide1 active" src="<?php echo $base_url; ?>img/1.png" alt="">
+    <img class="slide slide2" src="<?php echo $base_url; ?>img/2.png" alt="">
+    <img class="slide slide3" src="<?php echo $base_url; ?>img/3.png" alt="">
+    <img class="slide slide4" src="<?php echo $base_url; ?>img/4.png" alt="">
+    <img class="slide slide5" src="<?php echo $base_url; ?>img/5.png" alt="">
   </div>
 </div>
